@@ -21,6 +21,7 @@ cp -vrf /vagrant/ftp .
 chown vagrant:vagrant ./ansible.cfg ./inventory.yml ./requirements.yml
 chown -R vagrant:vagrant ./dns ./web ./ftp
 chmod 600 ./.vault_pass.txt
+chown vagrant:vagrant ./.vault_pass.txt
 
 # Instalar dependencias de Ansible
 ansible-galaxy collection install -r requirements.yml
